@@ -17,7 +17,7 @@ int main(int argc, char const *argv[])
 
     sql = R"(select * from t_user;)";
     sql_database::result_t result;
-    ret = sql_database::sqlite::query(sql, result);
+    ret = sql_database::sqlite::exec(sql, result);
     error = sql_database::sqlite::error_msg();
 
     printf("select result: %d, %s\n", ret, error.c_str());

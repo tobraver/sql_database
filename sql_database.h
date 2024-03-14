@@ -19,7 +19,7 @@ namespace sqlite
 int open(const std::string& file);
 int close(void);
 int exec(const std::string& sql);
-int query(const std::string& sql, result_t& result);
+int exec(const std::string& sql, result_t& result);
 std::string error_msg(void);
 
 }  // end of sql_database

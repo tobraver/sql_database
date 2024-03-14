@@ -93,7 +93,8 @@ int exec(const std::string& sql)
     return ret;
 }
 
-int query(const std::string& sql, result_t& result)
+// SELECT
+int exec(const std::string& sql, result_t& result)
 {
     int ret = -1;
     std::lock_guard<std::mutex> lock(g_sqlite_desc.mutex);
