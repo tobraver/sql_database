@@ -33,7 +33,7 @@ int main(int argc, char const *argv[])
         {
             printf("%s ", it.c_str());
         }
-    printf("\n");
+        printf("\n");
     }
     
     sql_database::sqlite::close();
