@@ -49,7 +49,7 @@ int open(const std::string& file)
     catch (std::exception& e)
     {
         g_sqlite_desc.error = e.what();
-        std::cout << "SQLITE EXCEPTION: " << e.what() << std::endl;
+        // std::cout << "SQLITE EXCEPTION: " << e.what() << std::endl;
     }
     return ret;
 }
@@ -71,7 +71,7 @@ int close(void)
     catch (std::exception& e)
     {
         g_sqlite_desc.error = e.what();
-        std::cout << "SQLITE EXCEPTION: " << e.what() << std::endl;
+        // std::cout << "SQLITE EXCEPTION: " << e.what() << std::endl;
     }
     return 0;
 }
@@ -88,7 +88,7 @@ int exec(const std::string& sql)
     catch (std::exception& e)
     {
         g_sqlite_desc.error = e.what();
-        std::cout << "SQLITE EXCEPTION: " << e.what() << std::endl;
+        // std::cout << "SQLITE EXCEPTION: " << e.what() << std::endl;
     }
     return ret;
 }
@@ -127,7 +127,7 @@ int exec(const std::string& sql, result_t& result)
     {
         ret = g_sqlite_desc.db->getErrorCode();
         g_sqlite_desc.error = e.what();
-        std::cout << "SQLITE EXCEPTION: " << e.what() << std::endl;
+        // std::cout << "SQLITE EXCEPTION: " << e.what() << std::endl;
     }
     return ret;
 }
